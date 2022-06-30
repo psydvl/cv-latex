@@ -1,0 +1,164 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[a4paper,top=20mm,bottom=20mm,left=20mm,right=20mm]{geometry}
+\usepackage{titlesec}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage{hyperref}
+\hypersetup{pdfborderstyle={/S/U/W 1}}
+\usepackage{xcolor}
+
+\ifdefined\userussian
+\def\uselang{english,russian}
+\else
+\def\uselang{russian,english}
+\fi
+\usepackage[\uselang]{babel}
+%\usepackage[english,russian]{babel} % use for russian version
+%\usepackage[russian,english]{babel} % use for english version
+\usepackage[languages={russian,english}]{multilang}
+\usepackage{multilang-sect}
+
+
+\definecolor{Title}{HTML}{2F5496}
+
+\titleformat{\section}[display]
+    {\normalfont\sffamily\Large\linespread{0.4}\bfseries\color{Title}}{\thesection}{}{\vspace{18pt}}[
+    \color{red}\rule{\textwidth}{0.5pt}
+    ]
+\titlespacing*{\section}{0pt}{*0}{0pt}
+
+
+\titleformat{\subsection}[display]
+    {\normalfont\sffamily\bfseries\color{Title}}{\thesubsection}{}{\vspace{12pt}}
+    
+\NewMultilangCmd{\mlHuge}{command=\Huge, margs=title}
+\NewMultilangCmd{\mlPara}{command=\empty, margs=text}
+\NewMultilangCmd{\mlHref}{command=\href, margs={url,text}}
+
+\title{CV}
+\author{Dmitriy P}
+\date{June 2022}
+
+\begin{document}
+\sffamily
+\begin{minipage}[t][][c]{0.9\linewidth}
+\color{Title}
+\mlHuge{
+title/english={Dmitriy Popov},
+title/russian={Попов Дмитрий Андреевич}
+}
+\end{minipage}
+
+\begin{minipage}[t]{0.58\linewidth}
+
+\begin{Section*}{
+title/english={About me},
+title/russian={О себе}
+}
+  \mlPara{
+  text/english={
+  Quick dive into new projects and unfamiliar technology/programming languages\\
+  Attentiveness\\
+  High concentration level\\
+  Creativity
+  },
+  text/russian={
+  Быстрое погружение в новые проекты и незнакомые технологии/языки программирования\\
+  Внимательность\\
+  Высокая степень концентрации\\
+  Креативность}
+  }
+\end{Section*}
+
+\begin{Section*}{
+title/english={Software skills},
+title/russian={Навыки}
+}
+  \mlPara{
+  text/english={
+  I've used as basic tools, including at hackathons, olympiads, and personal projects: Golang, Python, C++, SQL\\
+  Developing HTML, CSS site (even without JS)\\
+  Using Git, Docker, Bash, PowerShell, LaTeX\\
+  Also can read and basic use of: JavaScript, Rust, Julia, Haskell
+  },
+  text/russian={
+  Использование в качестве основного инструмента, в том числе на хакатонах, олимпиадах и личных проектах: Golang, Python, C++, SQL\\
+  Разработка сайтов с HTML, CSS (также без использования JS)\\
+  Использование Git, Docker, Bash, PowerShell, LaTeX\\
+  Также чтение и понимание на базовом уровне: JavaScript, Rust, Julia, Haskell}
+  }
+\end{Section*}
+\begin{Section*}{
+title/english={Other skills},
+title/russian={Умения}
+}
+  \begin{SubSection*}{
+  title/english={Setup and professional use},
+  title/russian={Настройка и профессиональное использование}
+  }
+    \mlPara{
+    text/english={OS Windows and Linux (personally, use of \underline{\href{https://github.com/psydvl/nixos}{NixOS}})
+    },
+    text/russian={ОС Windows и Linux (использую \underline{\href{https://github.com/psydvl/nixos}{NixOS}})}
+    }
+  \end{SubSection*}
+  \begin{SubSection*}{
+  title/english={Knowledge and use of },
+  title/russian={Знание и использование программ}
+  }
+    \mlPara{
+    text={Word, Excel, Vim}
+    }
+  \end{SubSection*}
+  \begin{SubSection*}{
+  title/english={Experience},
+  title/russian={Опыт}
+  }
+    \mlPara{
+    text/english={Database design\\
+    Setup and configure Linux server\\
+    Search and processing information using additional systems features Google/Yandex/etc},
+    text/russian={Проектирования БД\\
+    Запуск и настройка сервера на Linux\\
+    Поиска и обработка информации с использованием дополнительных возможностей систем Google/Yandex/etc}
+    }
+  \end{SubSection*}
+\end{Section*}
+
+\end{minipage}\qquad
+\begin{minipage}[t]{0.33\linewidth}
+\begin{Section*}{
+title/english={Contacts},
+title/russian={Контакты}
+}
+  \href{https://t.me/psydvl}{Telegram: @psydvl}\\
+  \href{mailto:psydvl@fastmail.com}{psydvl@fastmail.com}
+\end{Section*}
+
+\begin{Section*}{
+title/english={Other links},
+title/russian={Другие ссылки}
+}
+  \href{https://github.com/psydvl}{GitHub: @psydvl}\\
+  \mlHref{
+  url={https://github.com/psydvl/cv},
+  text/english={This CV code on GitHub},
+  text/russian={Код этого резюме на GitHub}
+  }
+\end{Section*}
+
+\begin{Section*}{
+title/english={Languages},
+title/russian={Знание языков}
+}
+  \mlPara{
+  text/english={Russian --- native\\
+  English --- intermediate},
+  text/russian={Русский --- Родной\\
+  Английский --- Intermediate}
+  }
+\end{Section*}
+
+\end{minipage}
+\end{document}
