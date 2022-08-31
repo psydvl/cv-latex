@@ -8,14 +8,14 @@
 \hypersetup{pdfborderstyle={/S/U/W 1}}
 \usepackage{xcolor}
 
-\ifdefined\userussian
-\def\uselang{english,russian}
+
+%\def\userussian{} % to switch to russian version
+\ifdefined\userussian{}
+  \def\uselang{english,russian}
 \else
-\def\uselang{russian,english}
+  \def\uselang{russian,english}
 \fi
 \usepackage[\uselang]{babel}
-%\usepackage[english,russian]{babel} % use for russian version
-%\usepackage[russian,english]{babel} % use for english version
 \usepackage[languages={russian,english}]{multilang}
 \usepackage{multilang-sect}
 
@@ -41,124 +41,135 @@
 \date{June 2022}
 
 \begin{document}
+\pagenumbering{gobble}
 \sffamily
 \begin{minipage}[t][][c]{0.9\linewidth}
-\color{Title}
-\mlHuge{
-title/english={Dmitriy Popov},
-title/russian={Попов Дмитрий Андреевич}
-}
+	\color{Title}
+	\mlHuge{
+		title/english={Dmitriy Popov},
+		title/russian={Попов Дмитрий Андреевич}
+	}
 \end{minipage}
 
 \begin{minipage}[t]{0.58\linewidth}
 
-\begin{Section*}{
-title/english={About me},
-title/russian={О себе}
-}
-  \mlPara{
-  text/english={
-  Quick dive into new projects and unfamiliar technology/programming languages\\
-  Attentiveness\\
-  High concentration level\\
-  Creativity
-  },
-  text/russian={
-  Быстрое погружение в новые проекты и незнакомые технологии/языки программирования\\
-  Внимательность\\
-  Высокая степень концентрации\\
-  Креативность}
-  }
-\end{Section*}
+	\begin{Section*}{
+			title/english={About me},
+			title/russian={О себе}
+		}
+		\mlPara{
+			text/english={
+					Quick dive into new projects and unfamiliar technology/programming languages\\
+					Attentiveness\\
+					High concentration level\\
+					Creativity
+				},
+			text/russian={
+					Быстрое погружение в новые проекты и незнакомые технологии/языки программирования\\
+					Внимательность\\
+					Высокая степень концентрации\\
+					Креативность
+				}
+		}
+	\end{Section*}
 
-\begin{Section*}{
-title/english={Software skills},
-title/russian={Навыки}
-}
-  \mlPara{
-  text/english={
-  I've used as basic tools, including at hackathons, olympiads, and personal projects: Golang, Python, C++, SQL\\
-  Developing HTML, CSS site (even without JS)\\
-  Using Git, Docker, Bash, PowerShell, LaTeX\\
-  Also can read and basic use of: JavaScript, Rust, Julia, Haskell
-  },
-  text/russian={
-  Использование в качестве основного инструмента, в том числе на хакатонах, олимпиадах и личных проектах: Golang, Python, C++, SQL\\
-  Разработка сайтов с HTML, CSS (также без использования JS)\\
-  Использование Git, Docker, Bash, PowerShell, LaTeX\\
-  Также чтение и понимание на базовом уровне: JavaScript, Rust, Julia, Haskell}
-  }
-\end{Section*}
-\begin{Section*}{
-title/english={Other skills},
-title/russian={Умения}
-}
-  \begin{SubSection*}{
-  title/english={Setup and professional use},
-  title/russian={Настройка и профессиональное использование}
-  }
-    \mlPara{
-    text/english={OS Windows and Linux \small{(use openSUSE Tumbleweed)}
-    },
-    text/russian={ОС Windows и Linux \small{(использую openSUSE Tumbleweed)}}
-    }
-  \end{SubSection*}
-  \begin{SubSection*}{
-  title/english={Knowledge and use of programs},
-  title/russian={Знание и использование программ}
-  }
-    \mlPara{
-    text={Word, Excel, Vim}
-    }
-  \end{SubSection*}
-  \begin{SubSection*}{
-  title/english={Experience},
-  title/russian={Опыт}
-  }
-    \mlPara{
-    text/english={Database design\\
-    Setup and configure Linux server\\
-    Search and processing information using additional systems features Google/Yandex/etc},
-    text/russian={Проектирования БД\\
-    Запуск и настройка сервера на Linux\\
-    Поиска и обработка информации с использованием дополнительных возможностей систем Google/Yandex/etc}
-    }
-  \end{SubSection*}
-\end{Section*}
+	\begin{Section*}{
+			title/english={Software skills},
+			title/russian={Навыки}
+		}
+		\mlPara{
+			text/english={
+					Use as basic tools, including at hackathons, olympiads, and personal projects: Golang, as well as Python, C++, SQL\\
+					Developing HTML, CSS sites\\
+					Using Git, Docker, Bash, PowerShell, \LaTeX{}\\
+					Also reading and using at basic level: JavaScript, Rust, Julia, Haskell, and  almost all other languages listed on \href{https://learnxinyminutes.com/}{https://learnxinyminutes.com/}
+				},
+			text/russian={
+					Использование в качестве основного инструмента, в том числе на хакатонах, олимпиадах и личных проектах: \textbf{Golang}, а также Python, C++, SQL\\
+					Разработка сайтов с HTML, CSS \\
+					Использование Git, Docker, Bash, PowerShell, \LaTeX{}\\
+					Также чтение и использование на базовом уровне: JavaScript, Rust, Julia, Haskell, а также многие другие языки указанные на \href{https://learnxinyminutes.com/}{https://learnxinyminutes.com/}
+				}
+		}
+	\end{Section*}
+	\begin{Section*}{
+			title/english={Other skills},
+			title/russian={Умения}
+		}
+		\begin{SubSection*}{
+				title/english={Setup and professional use},
+				title/russian={Настройка и профессиональное использование}
+			}
+			\mlPara{
+				text/english={OS Windows and Linux \small{(use openSUSE Tumbleweed)}
+					},
+				text/russian={ОС Windows и Linux \small{(использую openSUSE Tumbleweed)}}
+			}
+		\end{SubSection*}
+		\begin{SubSection*}{
+				title/english={Knowledge and use of programs},
+				title/russian={Знание и использование программ}
+			}
+			\mlPara{
+				text={Word, Excel, Vim}
+			}
+		\end{SubSection*}
+		\begin{SubSection*}{
+				title/english={Experience},
+				title/russian={Опыт}
+			}
+			\mlPara{
+				text/english={
+						Database design\\
+						Setup and configure Linux server\\
+						Search and processing information using additional systems features Google/Yandex/DDG/etc
+					},
+				text/russian={
+						Проектирование БД\\
+						Запуск и настройка сервера на Linux\\
+						Поиск и обработка информации с использованием дополнительных возможностей систем Google/Yandex/DDG/etc
+					}
+			}
+		\end{SubSection*}
+	\end{Section*}
 
 \end{minipage}\qquad
 \begin{minipage}[t]{0.33\linewidth}
-\begin{Section*}{
-title/english={Contacts},
-title/russian={Контакты}
-}
-  \href{https://t.me/psydvl}{Telegram: @psydvl}\\
-  \href{mailto:psydvl@fastmail.com}{psydvl@fastmail.com}
-\end{Section*}
+	\begin{Section*}{
+			title/english={Contacts},
+			title/russian={Контакты}
+		}
+		\href{https://t.me/psydvl}{Telegram: @psydvl}\\
+		\href{mailto:psydvl@fastmail.com}{psydvl@fastmail.com}
+	\end{Section*}
 
-\begin{Section*}{
-title/english={Other links},
-title/russian={Другие ссылки}
-}
-  \href{https://github.com/psydvl}{GitHub: @psydvl}\\
-  \mlHref{
-  url={https://github.com/psydvl/cv},
-  text/english={This CV code on GitHub},
-  text/russian={Код этого резюме на GitHub}
-  }
-\end{Section*}
+	\begin{Section*}{
+			title/english={Other links},
+			title/russian={Другие ссылки}
+		}
+		\href{https://github.com/psydvl}{GitHub: @psydvl}\\
+		\mlHref{
+			url={https://github.com/psydvl/cv},
+			text/english={This CV's code on GitHub},
+			text/russian={Код этого резюме на GitHub}
+		}
+	\end{Section*}
 
-\begin{Section*}{
-title/english={Languages},
-title/russian={Знание языков}
-}
-  \mlPara{
-  text/english={Russian --- native\\
-  English --- intermediate},
-  text/russian={Русский --- Родной\\
-  Английский --- Intermediate}
-  }
-\end{Section*}
+	\begin{Section*}{
+			title/english={Languages},
+			title/russian={Знание языков}
+		}
+		\mlPara{
+			text/english={
+					Russian --- native\\
+					English --- intermediate
+				},
+			text/russian={
+					Русский --- Родной\\
+					Английский --- Intermediate
+				}
+		}
+	\end{Section*}
 
 \end{minipage}
 \end{document}
