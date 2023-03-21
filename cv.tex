@@ -7,13 +7,14 @@
 \usepackage{hyperref}
 \hypersetup{pdfborderstyle={/S/U/W 1}}
 \usepackage{xcolor}
-
+\usepackage{enumitem}
+\setlist{nolistsep,labelindent=\parindent,leftmargin=*}
 
 %\def\userussian{} % to switch to russian version
 \ifdefined\userussian{}
-  \def\uselang{english,russian}
+  \def\uselang{english, russian}
 \else
-  \def\uselang{russian,english}
+  \def\uselang{russian, english}
 \fi
 \usepackage[\uselang]{babel}
 \usepackage[languages={russian,english}]{multilang}
@@ -24,7 +25,7 @@
 
 \titleformat{\section}[display]
     {\normalfont\sffamily\Large\linespread{0.4}\bfseries\color{Title}}{\thesection}{}{\vspace{18pt}}[
-    \color{red}\rule{\textwidth}{0.5pt}
+ \color{red}\rule{\textwidth}{0.5pt}
     ]
 \titlespacing*{\section}{0pt}{*0}{0pt}
 
@@ -52,84 +53,93 @@
 \end{minipage}
 
 \begin{minipage}[t]{0.58\linewidth}
+	\raggedright
 
 	\begin{Section*}{
 			title/english={About me},
 			title/russian={О себе}
 		}
-		\mlPara{
+		\begin{itemize}
+			\mlPara{
 			text/english={
-					Quick dive into new projects and unfamiliar technology/programming languages\\
-					Attentiveness\\
-					High concentration level\\
-					Creativity
-				},
-			text/russian={
-					Быстрое погружение в новые проекты и незнакомые технологии/языки программирования\\
-					Внимательность\\
-					Высокая степень концентрации\\
-					Креативность
-				}
-		}
+			\item Quick and deep dive into new projects so as unfamiliar technologies/programming languages
+			\item Attentiveness
+			\item High concentration level
+			\item Creativity/Idea generation
+			      },
+			      text/russian={
+			\item Быстро и глубоко изучаю новые проекты так и незнакомые технологии/языки программирования
+			\item Внимательность
+			\item Высокая степень концентрации
+			\item Креативность/генерация идей
+			      }
+			      }
+		\end{itemize}
 	\end{Section*}
 
 	\begin{Section*}{
 			title/english={Software skills},
 			title/russian={Навыки}
 		}
-		\mlPara{
+		\begin{itemize}
+			\mlPara{
 			text/english={
-					Use as basic tools, including at hackathons, olympiads, and personal projects: Golang, as well as Python, C++, SQL\\
-					Developing HTML, CSS sites\\
-					Using Git, Docker, Bash, PowerShell, \LaTeX{}\\
-					Also reading and using at basic level: JavaScript, Rust, Julia, Haskell, and  almost all other languages listed on \href{https://learnxinyminutes.com/}{https://learnxinyminutes.com/}
-				},
-			text/russian={
-					Использование в качестве основного инструмента, в том числе на хакатонах, олимпиадах и личных проектах: \textbf{Golang}, а также Python, C++, SQL\\
-					Разработка сайтов с HTML, CSS \\
-					Использование Git, Docker, Bash, PowerShell, \LaTeX{}\\
-					Также чтение и использование на базовом уровне: JavaScript, Rust, Julia, Haskell, а также многие другие языки указанные на \href{https://learnxinyminutes.com/}{https://learnxinyminutes.com/}
-				}
-		}
+			\item Big experience and main instrument: \textbf{Golang}
+			\item Well versed with Bash, Python, C++, SQL, HTML/CSS, Git, Docker, PowerShell, \LaTeX{}, Make
+			\item Can fast dive in langs listed on \href{https://learnxinyminutes.com/}{LearnXinYminutes.com}
+			      },
+			      text/russian={
+			\item Значительный опыт, основной инструмент: \textbf{Golang}
+			\item Хорошо знаком с Bash, Python, C++, SQL, HTML/CSS, Git, Docker, PowerShell, \LaTeX{}, Make
+			\item Могу быстро ознакомится с новым язком представленным \href{https://learnxinyminutes.com/}{LearnXinYminutes.com}
+			      }
+			      }
+		\end{itemize}
 	\end{Section*}
 	\begin{Section*}{
 			title/english={Other skills},
 			title/russian={Умения}
 		}
-		\begin{SubSection*}{
-				title/english={Setup and professional use},
-				title/russian={Настройка и профессиональное использование}
-			}
+		\begin{itemize}
 			\mlPara{
-				text/english={OS Windows and Linux \small{(use openSUSE Tumbleweed)}
-					},
-				text/russian={ОС Windows и Linux \small{(использую openSUSE Tumbleweed)}}
-			}
-		\end{SubSection*}
+			text/english={
+			\item OS Windows, Linux \small{(use openSUSE Tumbleweed/Leap)}
+			\item Word, Excel, Vim
+			\item Database design
+			\item Setup and configure Linux server
+			      },
+			      text/russian={
+			\item ОС Windows и Linux \small{(использую openSUSE Tumbleweed/Leap)}
+			\item Word, Excel, Vim
+			\item Проектирование БД
+			\item Запуск и настройка сервера на Linux
+			      }
+			      }
+		\end{itemize}
+	\end{Section*}
+
+	\begin{Section*}{
+			title/english={Work Experience},
+			title/russian={Опыт работы}
+		}
 		\begin{SubSection*}{
-				title/english={Knowledge and use of programs},
-				title/russian={Знание и использование программ}
+				title/english={Intern Developer | Yandex | \footnotesize{2023.01.10 - Present}},
+				title/russian={Стажер-разработчик | Яндекс | \footnotesize{2023.01.10 - Сейчас}}
 			}
-			\mlPara{
-				text={Word, Excel, Vim}
-			}
-		\end{SubSection*}
-		\begin{SubSection*}{
-				title/english={Experience},
-				title/russian={Опыт}
-			}
-			\mlPara{
+			\begin{itemize}
+				\mlPara{
 				text/english={
-						Database design\\
-						Setup and configure Linux server\\
-						Search and processing information using additional systems features Google/Yandex/DDG/etc
-					},
-				text/russian={
-						Проектирование БД\\
-						Запуск и настройка сервера на Linux\\
-						Поиск и обработка информации с использованием дополнительных возможностей систем Google/Yandex/DDG/etc
-					}
-			}
+				\item Developing and deploy watch\&delete microservice
+				\item Refactoring pandora (load generator) \href{https://github.com/yandex/pandora/commits/master?author=psydvl}{github}
+				\item Update Go toolchain in company monorepo to next major version (1.19.6 $\to$ 1.20.2, WIP)
+				      },
+				      text/russian={
+				\item Разработка и деплой следящего микросервиса
+				\item Рефакторинг pandora (генератор нагрузки) \href{https://github.com/yandex/pandora/commits/master?author=psydvl}{github}
+				\item Обновление тулчейна Go внутри монорепозитория до следуюшей мажорной версии (1.19.6 $\to$ 1.20.2, WIP)
+				      }
+				      }
+			\end{itemize}
 		\end{SubSection*}
 	\end{Section*}
 
