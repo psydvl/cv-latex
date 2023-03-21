@@ -45,6 +45,7 @@
 \pagenumbering{gobble}
 \sffamily
 \begin{minipage}[t][][c]{0.9\linewidth}
+	\raggedleft
 	\color{Title}
 	\mlHuge{
 		title/english={Dmitriy Popov},
@@ -52,8 +53,46 @@
 	}
 \end{minipage}
 
+\noindent \begin{minipage}[t]{0.33\linewidth}
+	\begin{Section*}{
+			title/english={Contacts},
+			title/russian={Контакты}
+		}
+		\href{https://t.me/psydvl}{Telegram: @psydvl}\\
+		\href{mailto:psydvl@fastmail.com}{psydvl@fastmail.com}
+	\end{Section*}
+
+	\begin{Section*}{
+			title/english={Other links},
+			title/russian={Другие ссылки}
+		}
+		\href{https://github.com/psydvl}{GitHub: @psydvl}\\
+		\mlHref{
+			url={https://github.com/psydvl/cv},
+			text/english={This CV's code on GitHub},
+			text/russian={Код этого резюме на GitHub}
+		}
+	\end{Section*}
+
+	\begin{Section*}{
+			title/english={Languages},
+			title/russian={Знание языков}
+		}
+		\mlPara{
+			text/english={
+					Russian --- native\\
+					English --- intermediate
+				},
+			text/russian={
+					Русский --- Родной\\
+					Английский --- Intermediate
+				}
+		}
+	\end{Section*}
+
+\end{minipage}
+\hspace{0.05\linewidth}
 \begin{minipage}[t]{0.58\linewidth}
-	\raggedright
 
 	\begin{Section*}{
 			title/english={About me},
@@ -141,44 +180,6 @@
 				      }
 			\end{itemize}
 		\end{SubSection*}
-	\end{Section*}
-
-\end{minipage}\qquad
-\begin{minipage}[t]{0.33\linewidth}
-	\begin{Section*}{
-			title/english={Contacts},
-			title/russian={Контакты}
-		}
-		\href{https://t.me/psydvl}{Telegram: @psydvl}\\
-		\href{mailto:psydvl@fastmail.com}{psydvl@fastmail.com}
-	\end{Section*}
-
-	\begin{Section*}{
-			title/english={Other links},
-			title/russian={Другие ссылки}
-		}
-		\href{https://github.com/psydvl}{GitHub: @psydvl}\\
-		\mlHref{
-			url={https://github.com/psydvl/cv},
-			text/english={This CV's code on GitHub},
-			text/russian={Код этого резюме на GitHub}
-		}
-	\end{Section*}
-
-	\begin{Section*}{
-			title/english={Languages},
-			title/russian={Знание языков}
-		}
-		\mlPara{
-			text/english={
-					Russian --- native\\
-					English --- intermediate
-				},
-			text/russian={
-					Русский --- Родной\\
-					Английский --- Intermediate
-				}
-		}
 	\end{Section*}
 
 \end{minipage}
